@@ -30,6 +30,9 @@ int                  back_lpitch     = 0;    // memory line pitch for back buffe
 
 int dd_pixel_format;  // default pixel format
 
+//default background color
+int defBckColor = 0x00000000;
+
 // these are overwritten globally by DDraw_Init()
 int screen_width,            // width of screen
     screen_height;           // height of screen
@@ -394,7 +397,7 @@ int DDraw_Init(int width, int height)
 	lpddsback = DDraw_Create_Surface(width, height, DDSCAPS_SYSTEMMEMORY); // int mem_flags, USHORT color_key_flag);
 
 	// only clear backbuffer
-	DDraw_Fill_Surface(lpddsback,0);
+	DDraw_Fill_Surface(lpddsback,defBckColor);
 
 
 	// set globals

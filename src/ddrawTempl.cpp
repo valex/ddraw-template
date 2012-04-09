@@ -231,7 +231,7 @@ int Game_Main(void *parms)
 
 
 	// clear the drawing surface
-	DDraw_Fill_Surface(lpddsback, 0);
+	DDraw_Fill_Surface(lpddsback, defBckColor);
 
 	// чтение состояния клавиатуры и мыши
 	DInput_Read_Keyboard();

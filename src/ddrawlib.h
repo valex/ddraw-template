@@ -52,6 +52,8 @@ extern DDSURFACEDESC2       ddsd;
 extern UCHAR                *back_buffer;         // secondary back buffer
 extern int                  back_lpitch;          // memory line pitch
 
+extern int defBckColor;
+
 extern int window_client_x0;   // used to track the starting (x,y) client area for
 extern int window_client_y0;   // for windowed mode directdraw operations
 
