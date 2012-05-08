@@ -36,6 +36,10 @@ int DDraw_Flip(void);
 int Draw_Text_GDI(char *text, int x,int y,COLORREF color, LPDIRECTDRAWSURFACE7 lpdds);
 
 // graphics functions
+int Clip_Line(int &x1,int &y1,int &x2, int &y2);
+int Draw_Line32(int xo, int yo, int x1,int y1, int color,UCHAR *vb_start,int lpitch);
+int Draw_Clip_Line32(int x0,int y0, int x1, int y1, int color,UCHAR *dest_buffer, int lpitch);
+
 
 // general utility functions
 DWORD Get_Clock(void);

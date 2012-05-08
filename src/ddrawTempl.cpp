@@ -220,7 +220,6 @@ int Game_Init(void *parms)
 	start_frame_time = Start_Clock();
 	start_fps_time = start_frame_time;
 
-
 	return(1);
 
 } // end Game_Init
@@ -256,9 +255,7 @@ int Game_Main(void *parms)
 		DDraw_Lock_Back_Surface();
 
 
-		//Draw_Pixel(100,100,0x00FFFFFF,back_buffer,back_lpitch);
-		//*((DWORD*)back_buffer) = 0x00FFFFFF;
-
+		//Draw_Clip_Line32(0,0,1000,4000,0x00FFFFFF,back_buffer,back_lpitch);
 
 		sprintf(buffer, "fps: %.1f", fps);
 		Draw_Text_GDI(buffer, 10,150,_RGB32BIT(0, 0, 255,0), lpddsback);
